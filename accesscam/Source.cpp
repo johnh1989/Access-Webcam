@@ -27,7 +27,7 @@ int APIENTRY WinMain(
 	cvNamedWindow("Camera", 1); //Create window
 	cvResizeWindow("Camera", 650, 521);
 	cvSetMouseCallback("Camera", CallBackFunc, NULL);
-	CvCapture* capture = cvCaptureFromCAM(1); //Capture using any camera connected to your system
+	CvCapture* capture = cvCaptureFromCAM(0); //Capture using any camera connected to your system
 	while (1){ //Create infinte loop for live streaming
 		IplImage* frame = cvQueryFrame(capture); //Create image frames from capture
 		cvShowImage("Camera", frame); //Show image frames on created window
